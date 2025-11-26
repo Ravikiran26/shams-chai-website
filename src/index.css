@@ -2,49 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Classic Corporate Design System - Warm, Traditional, Professional */
 
 @layer base {
   :root {
-    --background: 0 0% 4%;
-    --foreground: 40 10% 92%;
+    --background: 30 15% 97%;
+    --foreground: 25 25% 15%;
 
-    --card: 0 0% 8%;
-    --card-foreground: 40 10% 92%;
+    --card: 30 20% 94%;
+    --card-foreground: 25 25% 15%;
 
-    --popover: 0 0% 6%;
-    --popover-foreground: 40 10% 92%;
+    --popover: 30 15% 97%;
+    --popover-foreground: 25 25% 15%;
 
-    --primary: 0 0% 78%;
-    --primary-foreground: 0 0% 10%;
+    --primary: 25 35% 28%;
+    --primary-foreground: 30 15% 97%;
 
-    --secondary: 30 40% 50%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 30 25% 85%;
+    --secondary-foreground: 25 25% 15%;
 
-    --muted: 0 0% 12%;
-    --muted-foreground: 40 5% 60%;
+    --muted: 30 15% 90%;
+    --muted-foreground: 25 15% 45%;
 
-    --accent: 30 35% 45%;
-    --accent-foreground: 0 0% 95%;
+    --accent: 30 40% 45%;
+    --accent-foreground: 30 15% 97%;
 
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 18%;
-    --input: 0 0% 15%;
-    --ring: 0 0% 70%;
+    --border: 30 20% 85%;
+    --input: 30 15% 90%;
+    --ring: 25 35% 28%;
 
-    --radius: 0.75rem;
+    --radius: 0.25rem;
 
-    /* Custom brand colors */
-    --silver: 0 0% 75%;
-    --silver-light: 0 0% 85%;
-    --silver-dark: 0 0% 60%;
-    --amber: 30 80% 55%;
-    --amber-dark: 30 60% 40%;
-    --cream: 40 15% 90%;
+    /* Classic brand colors */
+    --mahogany: 15 45% 25%;
+    --mahogany-light: 15 35% 35%;
+    --gold: 38 70% 50%;
+    --gold-muted: 38 40% 65%;
+    --ivory: 40 30% 96%;
+    --charcoal: 25 20% 20%;
+    --warm-gray: 25 10% 55%;
   }
 }
 
@@ -54,7 +53,7 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
   }
 
   html {
@@ -63,35 +62,59 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
-  .text-silver {
-    color: hsl(var(--silver));
+  .text-mahogany {
+    color: hsl(var(--mahogany));
   }
   
-  .text-silver-light {
-    color: hsl(var(--silver-light));
+  .text-mahogany-light {
+    color: hsl(var(--mahogany-light));
   }
   
-  .text-amber {
-    color: hsl(var(--amber));
+  .text-gold {
+    color: hsl(var(--gold));
   }
   
-  .text-cream {
-    color: hsl(var(--cream));
+  .text-gold-muted {
+    color: hsl(var(--gold-muted));
   }
   
-  .bg-silver {
-    background-color: hsl(var(--silver));
+  .text-ivory {
+    color: hsl(var(--ivory));
   }
   
-  .border-silver {
-    border-color: hsl(var(--silver));
+  .text-charcoal {
+    color: hsl(var(--charcoal));
   }
   
-  .gradient-silver {
-    background: linear-gradient(135deg, hsl(var(--silver-dark)), hsl(var(--silver-light)));
+  .text-warm-gray {
+    color: hsl(var(--warm-gray));
   }
   
-  .gradient-amber {
-    background: linear-gradient(135deg, hsl(var(--amber-dark)), hsl(var(--amber)));
+  .bg-mahogany {
+    background-color: hsl(var(--mahogany));
+  }
+  
+  .bg-ivory {
+    background-color: hsl(var(--ivory));
+  }
+  
+  .bg-charcoal {
+    background-color: hsl(var(--charcoal));
+  }
+  
+  .border-gold {
+    border-color: hsl(var(--gold));
+  }
+  
+  .border-mahogany {
+    border-color: hsl(var(--mahogany));
+  }
+  
+  .classic-divider {
+    @apply h-px bg-gradient-to-r from-transparent via-border to-transparent;
+  }
+  
+  .gold-accent {
+    @apply border-l-4 border-gold pl-4;
   }
 }
