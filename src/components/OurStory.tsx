@@ -2,73 +2,74 @@ import { Coffee, Leaf, Heart } from "lucide-react";
 
 const OurStory = () => {
   return (
-    <section id="our-story" className="py-24 bg-card relative overflow-hidden">
-      {/* Decorative Elements */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-amber/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-      
-      <div className="container mx-auto px-6 relative z-10">
+    <section id="our-story" className="py-20 bg-background">
+      <div className="container mx-auto px-8">
         <div className="max-w-4xl mx-auto">
           {/* Section Title */}
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="font-serif text-5xl md:text-6xl font-bold text-silver-light mb-4">
+          <div className="text-center mb-16">
+            <p className="text-sm tracking-[0.2em] uppercase text-muted-foreground font-sans mb-3">
+              About Us
+            </p>
+            <h2 className="font-serif text-4xl md:text-5xl font-semibold text-foreground mb-4">
               Our Story
             </h2>
-            <div className="h-px w-24 mx-auto gradient-silver mb-6" />
-            <p className="text-xl text-muted-foreground italic">
-              A journey of passion, flavour, and tradition
-            </p>
+            <div className="flex items-center justify-center gap-4">
+              <div className="h-px w-12 bg-foreground/20" />
+              <span className="text-gold">✦</span>
+              <div className="h-px w-12 bg-foreground/20" />
+            </div>
           </div>
 
           {/* Main Content */}
-          <div className="space-y-8 text-center animate-fade-in">
-            <p className="text-lg md:text-xl text-foreground/90 leading-relaxed">
-              Shams Chai was born from one simple idea – your daily chai should feel like 
-              a warm hug, not just a habit.
+          <div className="space-y-8 text-center">
+            <p className="text-xl md:text-2xl text-foreground font-serif italic leading-relaxed">
+              "Your daily chai should feel like a warm hug, not just a habit."
             </p>
 
-            <p className="text-base md:text-lg text-foreground/80 leading-relaxed">
-              We carefully source quality tea leaves and whole spices, then slow-blend them 
-              in small batches to lock in flavour and freshness. Every pack of Shams Chai 
-              is made to give you:
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed font-sans max-w-2xl mx-auto">
+              Shams Chai was born from this simple idea. We carefully source quality tea leaves 
+              and whole spices, then slow-blend them in small batches to lock in flavour and freshness.
             </p>
+
+            {/* Divider */}
+            <div className="classic-divider my-12" />
 
             {/* Features Grid */}
-            <div className="grid md:grid-cols-3 gap-8 pt-8">
-              <div className="bg-muted/50 backdrop-blur-sm p-8 rounded-lg border border-border hover:border-silver/30 transition-all duration-300 hover:scale-105">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-amber/10 flex items-center justify-center">
-                  <Coffee className="w-8 h-8 text-amber" />
+            <div className="grid md:grid-cols-3 gap-8 pt-4">
+              <div className="p-8 border border-border bg-card">
+                <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+                  <Coffee className="w-6 h-6 text-accent" />
                 </div>
-                <h3 className="font-serif text-xl text-silver mb-2">Strong, Balanced Flavour</h3>
-                <p className="text-muted-foreground text-sm">
-                  Perfect masala blend in every cup
+                <h3 className="font-serif text-lg text-foreground mb-2">Robust Flavour</h3>
+                <p className="text-muted-foreground text-sm font-sans leading-relaxed">
+                  Strong, balanced masala in every cup
                 </p>
               </div>
 
-              <div className="bg-muted/50 backdrop-blur-sm p-8 rounded-lg border border-border hover:border-silver/30 transition-all duration-300 hover:scale-105">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Leaf className="w-8 h-8 text-primary" />
+              <div className="p-8 border border-border bg-card">
+                <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+                  <Leaf className="w-6 h-6 text-accent" />
                 </div>
-                <h3 className="font-serif text-xl text-silver mb-2">Consistent Taste</h3>
-                <p className="text-muted-foreground text-sm">
+                <h3 className="font-serif text-lg text-foreground mb-2">Consistent Quality</h3>
+                <p className="text-muted-foreground text-sm font-sans leading-relaxed">
                   Same premium experience, every time
                 </p>
               </div>
 
-              <div className="bg-muted/50 backdrop-blur-sm p-8 rounded-lg border border-border hover:border-silver/30 transition-all duration-300 hover:scale-105">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-secondary/10 flex items-center justify-center">
-                  <Heart className="w-8 h-8 text-secondary" />
+              <div className="p-8 border border-border bg-card">
+                <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+                  <Heart className="w-6 h-6 text-accent" />
                 </div>
-                <h3 className="font-serif text-xl text-silver mb-2">Easy Brewing</h3>
-                <p className="text-muted-foreground text-sm">
-                  Perfect for home, cafés, and offices
+                <h3 className="font-serif text-lg text-foreground mb-2">Simple Brewing</h3>
+                <p className="text-muted-foreground text-sm font-sans leading-relaxed">
+                  Perfect for home, office, and cafés
                 </p>
               </div>
             </div>
 
-            <p className="text-base md:text-lg text-foreground/80 leading-relaxed pt-8">
-              From early-morning kitchen chai to late-night work calls, Shams Chai is made 
-              to fit your day, your mood, and your people.
+            <p className="text-base text-muted-foreground leading-relaxed font-sans pt-8 max-w-2xl mx-auto">
+              From early-morning kitchen chai to late-night work calls, Shams Chai is crafted 
+              to complement your day, your mood, and your gatherings.
             </p>
           </div>
         </div>
